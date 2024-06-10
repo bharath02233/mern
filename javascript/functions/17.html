@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> 17.html</title>
+    </head>
+    <body>
+        <script>
+        function amstrong(num)
+        {
+           var x=num;
+           var sum=0;
+           while(num>0)
+           {
+            var rem=num%10;
+            sum=sum+(rem*rem*rem);
+            num=parseInt(num/10);
+           }
+           if(sum==x)
+           {
+            console.log("amstrong number");
+           }
+           else
+           {
+            console.log("not a amstrong number");
+           }
+        }
+        amstrong(153);
+        </script>
+    </body>
+</html>

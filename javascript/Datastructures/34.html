@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            34.html
+        </title>
+        <body>
+            <script>
+
+             var ar=[40000,30000,70000,80000];
+             var br=[];
+             var len=ar.length-1;
+             var tax=0;
+             for(var i=0;i<=len;i++)
+             {
+                if(ar[i]<50000)
+                {
+                    tax=ar[i]*(10/100);
+                    br[i]=ar[i]-tax;
+                }
+                else{
+                    tax=ar[i]*(12/100);
+                    br[i]=ar[i]-tax;
+                }
+             }
+             console.log(br);
+            </script>
+        </body>
+    </head>
+</html>

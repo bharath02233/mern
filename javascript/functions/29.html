@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        29.html
+    </title>
+    </head>
+    <body>
+        <script>
+        function perfectnumberinrange(num1,num2)
+        {
+
+            for(var i=num1;i<=num2;i++)
+            {
+            var num=i;
+            var sum=0;
+            for(var i=1;i<num;i++)
+            {
+                if(num%i==0)
+                {
+                    sum=sum+i;
+                }
+            }
+            if(sum==num)
+            {
+                console.log(num);
+            }
+            
+        }
+        }
+       perfectnumberinrange(0,10000);
+        </script>
+    </body>
+</html>

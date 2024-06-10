@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <title>
+    28.html
+   </title>        
+    </head>
+    <body>
+        <script>
+        function amstrongnumbersinrange(num1,num2)
+        {
+
+          for(var i=num1;i<=num2;i++)
+          {
+           var num=i;
+           var sum=0;
+           while(num>0)
+           {
+            var rem=num%10;
+            sum=sum+(rem*rem*rem);
+            num=parseInt(num/10);
+           }
+           if(sum==i)
+           {
+            console.log(i);
+           }
+           
+        }
+    }
+    amstrongnumbersinrange(0,1000);
+        </script>
+    </body>
+</html>

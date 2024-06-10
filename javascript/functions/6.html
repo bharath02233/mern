@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <title>
+            6.html
+        </title>
+        
+    </head>
+    <body>
+         <script>
+            function prime(a1)
+            {
+                 var count=0;
+                 for(var i=1;i<=a1;i++)
+                 {
+                    if(a1%i==0)
+                    {
+                     count++;
+                    }
+                 }
+                 if(count==2)
+                 {
+                    return "prime number";
+                 }
+                 else
+                 {
+                    return "not a prime number";
+                 }
+            }
+            var a=4;
+           var res=prime(a);
+           console.log(res);
+
+        
+         </script>
+    </body>
+</hmtl>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>70.html</title>
+    </head>
+    <body>
+        <script>
+           var marks={
+           "maths":34,
+           "english":56,
+           "science":32,
+           "hindi":75,
+           "social science":65
+           };
+           //1
+           for(var val in marks)
+           {
+                console.log(val,marks[val]);
+           }
+           //2
+           for(var val in marks)
+           {
+                console.log(val);
+           }
+           //3
+           var count=0;
+           for(var val in marks)
+           {
+              count++;
+           }
+           console.log(count);
+           //4
+              var sum=0;
+              for(var val in marks)
+              {
+                 sum=sum+marks[val];
+              }             
+              console.log((sum/500)*100);
+           //5
+           for(var val in marks)
+           {
+             if(marks[val]>35)
+             {
+                console.log(val);
+             }
+           }
+           //6
+           for(var val in marks)
+           {
+             if(marks[val]>=35)
+             {
+                console.log(val,"pass");
+             }
+             else
+             {
+                console.log(val,"fail");
+             }
+           }
+          //7
+          for(var val in marks)
+           {
+             if(marks[val]>=35)
+             {
+                console.log(val);
+             }
+           }
+           //8
+           count=0;
+           for(var val in marks)
+           {
+             if(marks[val]>=35)
+             {
+                count++;
+             }
+           }
+           console.log(count);
+
+           //9
+           for(var val in marks)
+           {
+             if(marks[val]<35)
+             {
+                console.log(val);
+             }
+           }
+           //10
+            count=0;
+           for(var val in marks)
+           {
+             if(marks[val]<35)
+             {
+                count++;
+             }
+           }
+           console.log(count);
+           //11
+
+           var min=marks["maths"];
+           for(var val in marks)
+           {
+             if(marks[val]<min)
+             {
+                min=marks[val];
+             }
+           }
+           for(var val in marks)
+           {
+             if(min==marks[val])
+             {
+                console.log(val);
+             }
+           }
+          //12.Print the highest scored subject.
+          var max=marks["maths"];
+           for(var val in marks)
+           {
+             if(marks[val]>max)
+             {
+                max=marks[val];
+             }
+           }
+           for(var val in marks)
+           {
+             if(max==marks[val])
+             {
+                console.log(val);
+             }
+           }
+          //13.
+          for(var val in marks)
+           {
+             if(marks[val]>=35)
+             {
+                console.log(val,"pass");
+             }
+             else
+             {
+                console.log(val,"fail");
+             }
+           }
+         //14.
+           var sub=prompt();
+           var mar=marks[sub];
+           if(mar>=35)
+           {
+            console.log(marks[sub],"pass");
+           }
+           else{
+            console.log(marks[sub],"fail");
+           }
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        5.html
+    </title>
+    </head>
+    <body>
+        <script>
+            function rev(a)
+            {
+              var r=0;
+              while(a>0)
+              {
+                var rem=a%10;
+                r=r*10+rem;
+                a=parseInt(a/10);
+              }
+              console.log(r);
+            }
+            rev(401);
+            
+        </script>
+    </body>
+</html>
