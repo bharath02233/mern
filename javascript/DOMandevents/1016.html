@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            1016.html
+        </title>
+        <style>
+            #d1
+            {
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="d1"><img src="bike1.jpeg" height="200px" onclick="a(event)"></div>
+   <script>
+    var ar=["bike2.jpeg","bike3.jpeg","bike1.jpeg"]
+    var i=0;
+    function a(eve)
+    {
+       
+       eve.target.src=ar[i];
+       i++;
+       if(i==ar.length)
+       {
+        i=0;
+       }
+    }
+   </script>
+    </body>
+</html>

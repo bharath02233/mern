@@ -1,0 +1,81 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+        
+
+
+        //  var x=<h1>hi</h1>;
+        function FirstComponent(props)
+        {
+            
+            var hy=React.useRef();
+            React.useEffect(()=>{
+                props.add(hy);
+            },[]);
+          
+           return <div style={{border:'1px solid',margin:'5px'}}><input id="i3" ref={hy}/></div>
+        }
+       
+       
+        function Component1()
+        {
+           
+            var x1=React.useRef();
+          
+            var x2=React.useRef();
+            var x=React.useEffect(()=>{
+                document.getElementById('i1').focus();
+            },[]);
+            
+           function hi()
+           {
+            var x3=document.getElementById('i1').value;
+            
+            if(x3==``)
+           {
+             x1.current.focus();
+           }
+        
+           }
+           function hi1()
+           {
+            var x4=document.getElementById('i2').value;
+            
+            if(x4==``)
+           {
+             x2.current.focus();
+           }
+        
+           }
+           
+           function xyz(x)
+           {
+            
+                x2=x;
+           }
+           console.log(x1);
+            return <div style={{border:'1px solid',padding:'5px'}}>
+            
+               App....
+              <input onKeyUp={hi} id="i1" />
+              <input onKeyUp={hi1} id="i2" ref={x1}/>
+               <FirstComponent add={xyz}></FirstComponent>
+              
+            </div>
+            
+           
+        }
+        ReactDOM.render(<div><Component1></Component1></div>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

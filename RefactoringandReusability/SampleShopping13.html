@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+        
+
+
+        //  var x=<h1>hi</h1>;
+        
+        
+        function Component1(props)
+        {
+          var [valu,setValu]=React.useState([0,0,0,0,0,0]);
+          
+          var [tote,setTote]=React.useState([11,12,13,14,15,16]);
+          var [total,setTotal]=React.useState([0,0,0,0,0,0]);
+           function inc(i)
+           {
+             var temp=[...valu];
+             temp[i]=temp[i]+1;
+             var temp1=[...tote];
+             temp1[i]=temp1[i]*temp[i];
+             setTotal([...temp1]);
+             setValu([...temp]);
+           }
+            
+            return <div style={{border:'1px solid',padding:'5px'}}>
+               {props.ar.map((e,i)=>{ return <div style={{border:'1px solid'}}>{e.name} <b>{valu[i]}</b> <b> {tote[i]}</b><b> {total[i]}</b><button onClick={()=>{inc(i)}}>+</button><button>-</button></div>})}
+            </div>
+            
+           
+        }
+        ReactDOM.render(<div><Component1 ar={[{name:'item 1'},{name:'item 2'},{name:'item 3'},{name:'item 4'},{name:'item 5'},{name:'item 6'}]}></Component1></div>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server1",
+      "author": "typicode1"
+    }
+  ],
+  "users": [
+    {
+      "username": "bharath",
+      "password": "Bharath-123",
+      "id": 1
+    },
+    {
+      "username": "2010030391",
+      "password": "Bharath-123",
+      "id": 2
+    },
+    {
+      "username": "2010030391",
+      "password": "dd",
+      "id": 3
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 7
+    }
+  ]
+}

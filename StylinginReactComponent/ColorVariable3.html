@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+    
+         function Component1()
+         {
+            var [ele,setEle]=React.useState("brown");
+           return <div><h1 style={{color:ele}}>Hello eduploy</h1></div>
+         }
+         ReactDOM.render(<Component1></Component1>,document.getElementById("root"));
+        </script>
+    </body>
+</html>
+<!--
+doubt colour
+-->
+

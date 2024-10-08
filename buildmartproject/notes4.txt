@@ -1,0 +1,1 @@
+//by this we cannot send 'arguments' to the function onClick={Abc}.for sending arguments we use onCLick={(e)=>{Abc(e);}}

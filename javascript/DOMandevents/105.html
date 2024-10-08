@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            105.html
+        </title>
+        <style>
+            body{
+                background-color:rgba(255, 255, 0, 0.193);
+            }
+            h1{
+                color:red;
+                text-align: center;
+            }
+            button{
+               background-color: yellow; 
+            
+            }
+            div{
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+     
+    <h1>Toggle button to show true/false</h1><!--doubt why we keep center inside only-->
+   <div id="d1">
+    <button onclick="a(event)">Toggle</button>
+   </div>  
+   <script>
+     var ele=document.createElement("b");
+        
+        ele.innerHTML="";
+        ele.id="b1";
+        ele.style.color="red";
+    document.getElementById("d1").appendChild(ele);
+    function a()
+    {
+       var ele1=document.getElementById("b1");
+      
+       if(ele1.innerHTML=="")
+       {
+         ele1.innerHTML="true";
+
+       }
+       else if(ele.innerHTML=="true")
+       {
+         ele.innerHTML="false";
+       }
+       else{
+        ele1.innerHTML="true";
+       }
+    }
+
+   </script>
+   
+  
+    </body>
+</html>

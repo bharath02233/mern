@@ -1,0 +1,5 @@
+webapplication is a set of programs.which will be executed dynamically.
+36SMPOtvUPwRw2X6
+npm install mongoose
+mongodb+srv://bharath02233:36SMPOtvUPwRw2X6@cluster0.ipbyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+

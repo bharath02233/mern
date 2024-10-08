@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            1012.html
+        </title>
+    </head>
+    <body>
+        <div style="height:100px;text-align:center;">
+          <img src="aeroplane1.jpeg" style="height:100px" onclick="ab(event)" id="i1">
+          <img  src="aeroplane2.png"style="height:100px" onclick="ab(event)" id="i2">
+          <img src="aeroplane3.png" style="height:100px" onclick="ab(event)" id="i3">
+        </div>
+        <div id="d2" style="height:300px;text-align: center;"><img id="i4" style="height: 300px;"></div>
+        <script>
+          function ab(event)
+          {
+             var ele=document.getElementById("i4");
+             ele.src=event.target.src;
+            
+          }
+        </script>
+    </body>
+</html>

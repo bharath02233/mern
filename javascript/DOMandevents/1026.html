@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <style>
+        table,td
+        {
+            border:solid;
+        }
+        div{
+            color: red;
+        }
+     </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Firstname</td>
+                <td>
+                    <input type="text" id="i1"  placeholder="firstname">
+                    <div id="d1">please enter firstname</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Lastname</td>
+                <td ><input type="text" id="i2" placeholder="secondname">
+                    <div id="d2">please enter Secondname</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" id="i3">
+                    <div id="d3">please enter your dob</div>
+                </td>
+
+            </tr>
+           
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="in1"  value="male" >:Male
+                    <input type="radio" name="in1"  value="female" >:Female
+                    <input type="radio" name="in1"  value="others" >:Others
+                    <div id="d4">please select your gender</div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>Technologies</td>
+                <td><input type="checkbox" name="in2" id="i8" value="html">html
+                    <input type="checkbox" name="in2" id="i9" value="css">css
+                    <input type="checkbox" name="in2" id="i10" value="bootstrap">bootstrap
+                    <input type="checkbox" name="in2" id="i11" value="react">react
+                    <input type="checkbox" name="in2" id="i12" value="java">java
+                </td>
+
+            </tr>
+            
+            <tr>
+                <td>Country:</td>
+                <td>
+                <select id="s1">
+                    <option>india</option>
+                    <option>pakshithan</option>
+                </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td><input type="textarea" id="i13">
+                </td>
+
+            </tr>
+
+          <tr>
+            <td colspan="2" style="text-align: center;"><button onclick="a()">Save</button></td>
+          </tr>
+      
+        </table>
+
+        <script>
+            var ob={};
+            function a()
+            {
+            
+                ob.firstname=document.getElementById("i1").value;
+                var len1=ob.firstname.length;
+                if(len1>=1)
+                {
+                    document.getElementById("d1").hidden="true";//by default in attribute we can not do this like hidden=true or false. in script it will consider true or false as true;  
+                }
+                ob.lastname=document.getElementById("i2").value;
+                var len2=ob.lastname.length;
+                if(len2>=1)
+                {
+                    document.getElementById("d2").hidden="true";//by default in attribute we can not do this like hidden=true or false   
+                }
+                ob.DateofBirth=document.getElementById("i3").value;
+                var len3=ob.DateofBirth.length;
+                if(len3>=1)
+                {
+                    document.getElementById("d3").hidden="true";//by default in attribute we can not do this like hidden=true or false .   
+                }
+                var x=document.getElementsByName("in1");
+                var len4;
+                for(var j=0;j<=x.length-1;j++)
+                {
+                    if(x[j].checked)
+                    {
+                        ob.gender=x[j].value;
+                        len4=1;
+                        document.getElementById("d4").hidden="true";
+                    }
+                }
+
+                var x=document.getElementsByName("in2");
+                var j;
+                var ar=[];
+                for(j=0;j<=x.length-1;j++)
+                {
+                    if(x[j].checked)
+                    {
+                        ar.push(x[j].value);       
+                        
+                    }
+                }
+                 ob.technologies=ar;// objects stores arrays also
+                 ob.country=document.getElementById("s1").value;
+                 ob.comments=document.getElementById("i13").value;
+
+
+               
+                           if(len1>=1 && len2>=1 && len3>=1 && len4>=1)
+                           {
+                                     var x=JSON.stringify(ob);
+                                 document.write(x);   
+                           }
+
+                   
+                 
+            }
+            
+        </script>
+    </body>
+</html>

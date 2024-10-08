@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            104.html
+        </title>
+       <style>
+        #a{
+        
+          border:1px solid black;
+          height:100px;    /*percentage is not working*/
+          width:200px;
+          background-color:aqua;
+        }
+       </style>
+    </head>
+    <body>
+        <div id="a" onclick="abc(event)"></div>  <!--if we keep number as name the id is not working-->
+    
+     <script>
+        // var ar=["red","yellow","green"];
+        // var i=0;
+         function abc(ev)
+         {
+        var y=document.getElementById("a");
+        var x=y.style.backgroundColor;
+        // y.style.backgroundColor=ar[i];
+        // i++;
+        // if(i==ar.length)
+        // {
+        //   i=0;
+        // }
+       
+          if(x=="aqua")
+          {
+            document.getElementById("a").style.backgroundColor="red"; 
+          }
+          else if(x=='red')
+          {
+            document.getElementById("a").style.backgroundColor="green";
+          }
+          else if(x=='green')
+          {
+            document.getElementById("a").style.backgroundColor="blue"; 
+        
+          }
+          else if(x=='blue')
+          {
+            document.getElementById("a").style.backgroundColor="orange"; 
+          }
+          else
+          {
+            document.getElementById("a").style.backgroundColor="aqua";
+          }
+          
+        }
+     </script>
+
+    </body>
+    
+</html>
+

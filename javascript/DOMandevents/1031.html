@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="h1"></h1>
+        <br>
+        <br>
+        <br>
+        <div style="text-align: center;">
+       
+           <button onclick="b()">check</button>
+           <br>
+           <input type="number" id="i1" >
+           <button id="b2" disabled>click below buttons</button>
+           <input type="number" id="i2" >
+           <br>
+           <button onclick="a(event)">></button>
+           <button onclick="a(event)"><</button>
+           <button onclick="a(event)">=</button>
+
+        </div>
+        <script>
+            function a(ev)
+            {
+            var ele=document.getElementById("b2");
+             ele.innerHTML=ev.target.innerHTML;
+            }
+
+            function b()
+            {
+                var ele=document.getElementById("b2").innerHTML;
+                if(ele=="click below buttons")
+                {
+
+                }
+                else{
+                
+                var ele1=+document.getElementById("i1").value;
+                
+                var ele2=+document.getElementById("i2").value;
+                var ele3=document.getElementById("h1");
+                 if(ele=="&gt;")
+                 {
+                    if(ele1>ele2)
+                    {
+                    
+                        ele3.innerHTML="yes it is greatest";
+                    }
+                    else{
+                        ele3.innerHTML="no it is not greatest";
+                    }
+                 }
+                 else if(ele=="&lt;")
+                 {
+                    if(ele1<ele2)
+                    {
+                        ele3.innerHTML="yes it is less";
+                    }
+                    else{
+                    
+                        ele3.innerHTML="no it is not less";
+                    }
+
+                 }
+                else
+                {
+                    if(ele1==ele2)
+                    {
+                        ele3.innerHTML="both are equal";
+
+                    }
+                    else
+                    {
+                        ele3.innerHTML="both are not equal";
+                    }
+                }
+              }
+            }
+        </script>
+    </body>
+</html>

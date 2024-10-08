@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <title>
+    5.html
+   </title>
+    </head>
+    <body>
+       <!-- <h1 id="1"></h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+    
+        <table border="1px solid black">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+
+            </tr>
+        </table>
+
+
+        <script>
+        //  document.getElementById("1").innerHTML="HelloDOM World!";
+   
+   
+        //   document.getElementById("1").innerHTML="HelloDOM World!";
+    //   document.getElementById("1").style.color="red";
+                        
+    
+    //    var ar=["ramesh","suresh","praveen","gopi","sunil"];
+    //     var br=document.getElementsByTagName("li");
+    //  ar.forEach(function(e,i){
+    //     br[i].innerHTML=e;
+    //  })
+
+
+    // var ar=[11,12,13,14,15,16,17];
+    //     var br=document.getElementsByTagName("li");
+    //  ar.forEach(function(e,i){
+    //     br[i].innerHTML=e;
+    //   })
+      
+       var ob1=[
+        {"Name":"praveen","Age":36,"Gender":"male","Salary":"hyd","City":10000},
+        {"Name":"srikanth","Age":32,"Gender":"male","Salary":"benguluru","City":20000},
+        {"Name":"pradeep","Age":21,"Gender":"male","Salary":"hyd","City":25000},
+        {"Name":"mounkia","Age":20,"Gender":"female","Salary":"nalagonda","City":30000},
+        {"Name":"nikhil","Age":22,"Gender":"male","Salary":"guntur","City":2000},
+        {"Name":"riya","Age":14,"Gender":"female","Salary":"indore","City":40000}
+       ]
+    var ar=document.getElementsByTagName("td");
+      ob1.forEach(
+        function(ele,i){
+         ar[i].innerHTML=ele["Name"];
+         ar[i].innerHTML=ele["Age"];
+         ar[i].innerHTML=ele["Age"];
+         ar[i].innerHTML=ele["Age"];
+         ar[i].innerHTML=ele["Age"];
+        }
+      );
+</script>
+    </body>
+</html>

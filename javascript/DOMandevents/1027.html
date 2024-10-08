@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="text-align: center;">Validation using RegEx for password</h1>
+        <input type="text" id="i1" style="margin-left:39%;">
+        <button onclick="a()">click</button> 
+        <div id="d1"></div>
+        <script>
+            function a()
+            {
+               
+                var val=document.getElementById("i1").value;
+
+                var c1=0;
+                var c2=0;
+                var c3=0;
+                var c4=0;
+                if(val[0]>='A' && val[0]<='Z')
+                {
+                    c2=1;
+                }
+                for(var i=0;i<=val.length-1;i++)
+               {
+                if(val[i]>=0 && val[i]<=9)
+                {
+                  c1=1;
+                }
+                if(val[i]=='@' ||val[i]=='$' || val[i]=='&')
+               {
+                  c3=1;
+               }
+               
+            }
+            if(val.length>=8)
+            {
+                c4=1;
+            }
+          
+            var ele=document.getElementById("d1");
+            if(c1==1 && c2==1 &&c3==1 && c4==1)
+            {
+              ele.innerHTML="conditon met";  
+            }
+            else
+            {
+               
+
+               ele.innerHTML="An alphanumeric password must be used"+"<br>"+"first letter always needs to be capital"+"<br>"+"A special character must be incli&d in the password S. ! , etc)."+"<br>"+"length Of the russword must exceed 8 characters.";
+            }
+
+
+            }
+
+        </script>
+    </body>
+</html>

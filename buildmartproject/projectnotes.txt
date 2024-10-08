@@ -1,0 +1,23 @@
+frontend:
+
+.in react using the useState hook able to update the state,render when then state value is updated or modified.
+
+.by using useEffect able to make changes in mounting time.
+.by using the useRef and useForwardRef able to handle the state variable in child components to acheive the reusability.
+.by using the 'formik library' develop the user login forms.
+.implemented routing to nagivate from one page to another.
+. using the redux and redux-tool kit able to acheive global scobes in all components.
+
+
+.by using the  api endpoints able to acess the data from server.by using builder mutation,builder query to fetech the data.
+.by using the lazyfunctions able to fetch the data very fastly.
+
+
+
+
+
+backend:
+.by using the json fake server able to acess to store data.
+.implemented the authenication in middle ware to secure the data.
+ 
+ 

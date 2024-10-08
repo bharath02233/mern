@@ -1,0 +1,1 @@
+we can apply text-align to block level

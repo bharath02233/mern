@@ -1,0 +1,15 @@
+middleware checks for  particular request is this request containing username or not based on username it give response.
+
+
+res.redirect("");
+
+it will check for route if the route is not there then it will send file 
+
+
+for sendfile();
+ the path is not changing
+
+
+
+redirect is having security
+sendFile is not having security

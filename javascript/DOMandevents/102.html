@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="1" style="border:1px solid black;height:50px;width:250px;"></div>
+
+         <button onclick="a(event)">RED</button>
+         <button onclick="a(event)">GREEN</button>
+         <button onclick="a(event)">BLUE</button>
+         <button onclick="a(event)">RESET</button>
+         
+        <script>
+         function a(event)
+         {
+            var x=event.target.innerHTML;
+         
+            if(x!="RESET")
+            {
+             document.getElementById("1").style.backgroundColor=x;      
+            }
+            else{
+            document.getElementById("1").style.backgroundColor="white";  
+            }
+            
+        
+         }
+        </script>
+    </body>
+</html>
+
+

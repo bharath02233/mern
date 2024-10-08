@@ -1,0 +1,13 @@
+
+app.use(express.static(__dirname+"/public"));
+
+
+.by using this we can not create multiple routes for every request.
+.if our sever does not contain request route then it will go to public folder and 
+send respective  file.
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            106.html
+        </title>
+        <style>
+            /* div{
+                border:solid;
+                width:50px;
+                height:50px;
+            } */
+            button
+            {
+                margin:50px;
+                height:50px;
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div id="d1"></div> -->
+         <button id="b1" onclick="a(event)">on</button>
+       <script>
+        function a(e)
+        {
+          var val=e.target.innerHTML;
+   
+          if(val=="on")
+          {
+            e.target.innerHTML="off";
+          }
+          else
+          {
+            e.target.innerHTML="on";
+          }
+        }
+    
+        
+       </script>    
+    
+    
+ </body>
+</html>

@@ -1,0 +1,13 @@
+anchor tags by default it will fire get request
+
+server
+
+client
+
+
+res.sendFile();
+if we give .js or .css then it will convert into html and returns to the broswer.
+
+
+
+npm i cookie-parser

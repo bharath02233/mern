@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>
+        36.html
+     </title>
+    </head>
+    <body>
+        <script>
+         var ar=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        var br=[];
+        var cr=[];
+        ar.forEach(function(a){
+            if(a%2!==0)
+            {
+                br.push(a);
+            }
+        })
+        console.log('for');
+        console.log(br);
+        console.log('while');
+        var i=0;
+        while(i<=ar.length-1)
+        {
+            if(ar[i]%2!=0)
+            {
+            cr.push(ar[i]);
+            }
+            i=i+1;
+        }
+        console.log(cr);
+        </script>
+    </body>
+</html>

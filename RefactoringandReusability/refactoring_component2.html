@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+        
+
+
+        //  var x=<h1>hi</h1>;
+        function Component1()
+        {
+
+             
+             var [state,setState]=React.useState([0,0,0]);
+             function abc()
+             {
+               
+                var ar=state;
+                console.log(ar);
+                ar[0]=ar[0]+1;
+
+                setState([ar])
+                console.log(state);
+             }
+            return <div>
+            
+             <input type={(state[0]==5)?"text":"password"} />
+             <button onClick={abc}>clickme</button>
+             {
+               state.map((e)=>{return <h1>{e}</h1>})
+             }
+
+            </div>
+            
+           
+        }
+        ReactDOM.render(<div><Component1></Component1></div>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+
+
+.sir reactdom render function will append to corresponding element to body only once or not?
+.sir by using use state when the state value is modifing the hole component is calling or only respesctive state linked elements will change

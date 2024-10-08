@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+       <input  id="i1" type="text"/>
+       <button onclick="abc()">copy clipboard</button>
+       <script>
+         function abc()
+         {
+            console.log(window);
+            var a=document.getElementById("i1").value;
+            navigator.clipboard.writeText(a);
+         }
+
+        </script>
+    </body>
+</html>

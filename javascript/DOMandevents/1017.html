@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            1016.html
+        </title>
+        <style>
+            #d1
+            {
+              text-align: center;
+            }
+            button
+            {
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+    <h1 style="color:red;text-align: center;">Image Carousel</h1>
+    <div id="d1" style="height:200px;"><img src="bike1.jpeg" height="200px" id="i1" ></div><!--image border doubt-->
+    <br>
+    <button style="margin-left:35%;" onclick="b()">Prev</button>
+    <button style="margin-left:250px;" onclick="a()">Next</button><!--% calulates from new line,px calculates from same line-->
+   <script>
+    var ar=["bike2.jpeg","bike3.jpeg","bike1.jpeg"]
+    var i=0;
+    function a()
+    {
+       var ele=document.getElementById("i1");
+    
+       ele.src=ar[i];
+       i++;
+       if(i==ar.length)
+       {
+        i=0;
+       }
+    }
+    function b()
+    {
+
+       var ele=document.getElementById("i1");
+       if(i==0)
+       {
+        i=ar.length;
+       }
+       i--;
+       ele.src=ar[i];         //check conditions twice
+       
+    }
+   </script>
+    </body>
+</html>

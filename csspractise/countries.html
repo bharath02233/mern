@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <center><input type="text" id="i1" /><button onclick="Sear()">search</button></center>
+        <div id="d3">
+       <div id="d1" style="display:grid;grid-template-columns:auto auto auto">
+     
+       </div>
+       <div id="d2" style="display:grid;grid-template-columns:auto auto auto"></div>
+     
+       </div>
+      </div>
+
+        <script>
+        var data;
+        async function abc(){
+          var res=await fetch('https://restcountries.com/v3/all');
+          if(res.ok)
+         {
+          data=await res.json();
+          console.log(data);
+          data.forEach((ele)=>{
+           var ndiv=document.createElement("div");
+
+           var nh1=document.createElement("h1");
+           nh1.innerHTML=ele.name.common;
+           ndiv.appendChild(nh1);
+
+           var nimg=document.createElement("img");
+           nimg.src=ele.flags[0];
+           nimg.style.width="300px";
+           ndiv.appendChild(nimg);
+            
+           var nh1=document.createElement("h1");
+           nh1.innerHTML=ele.population;
+           nh1.style.textAlign="center";
+           ndiv.appendChild(nh1);
+           document.getElementById("d1").appendChild(ndiv);
+
+        })
+         }
+         else{
+             
+         }
+        }
+        
+        abc();
+        
+       function Sear()
+       {
+        if(document.getElementById("d1"))
+       {
+        document.getElementById("d3").removeChild(d1);
+       }
+       if(document.getElementById('d4'))
+       {
+        document.getElementById("d2").removeChild(d4);
+       }
+       
+          var x=document.getElementById("i1").value;
+           
+         var c= data.find((ele)=>{
+            if(ele.name.common.toLowerCase()==x)
+          {
+            return true;
+          }
+          })
+         if(c)
+         {
+
+          var ndiv=document.createElement("div");
+          ndiv.id="d4";
+var nh1=document.createElement("h1");
+nh1.innerHTML=c.name.common;
+ndiv.appendChild(nh1);
+
+var nimg=document.createElement("img");
+nimg.src=c.flags[0];
+nimg.style.width="300px";
+ndiv.appendChild(nimg);
+ 
+var nh1=document.createElement("h1");
+nh1.innerHTML=c.population;
+nh1.style.textAlign="center";
+ndiv.appendChild(nh1);
+document.getElementById("d2").appendChild(ndiv);
+         }
+       }
+        
+
+      
+
+        
+         
+       
+        </script>
+    </body>
+</html>

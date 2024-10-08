@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style="display:flex;justify-content:center;height:200px;">
+        <form action="http://127.0.0.1:5500/multeruse/form.html" method="post">
+            <input name="firstname" /></br>
+
+            <button>submit</button>
+            
+        </form>
+    </div>
+    <script>
+         function verif(ev)
+         {
+            console.log(ev);
+
+          console.log(ev.target.files[0].size);
+         }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>108.html</title>
+        <style>
+            h1{
+                text-align: center;
+                color:red;
+            }
+            #d1 button{
+                background-color:rgba(12, 241, 12, 0.357);
+                
+            }
+            #d1
+            {
+                text-align: center;
+            }
+            #d2 button{
+                background-color:red;
+                
+            }
+            #d2
+            {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+       <h1>Like and Dislike Button</h1>
+       <div id="d1" ><button onclick="a()">Like</button></div>
+       <br>
+       
+       <div id="d2" ><button onclick="b()" style="color:white;">DisLike</button></div>
+        <script>
+
+     var ele=document.createElement("b");
+     var ele1=document.createElement("b");
+     ele.style.color="red";
+     ele1.style.color="red";
+     document.getElementById("d1").appendChild(ele);
+     document.getElementById("d2").appendChild(ele1); //if we take same name as ele then it will work wrongly
+     var c=0;
+           var c1=0;
+           function a()
+           {
+          
+             c++;
+
+             ele.innerHTML=c;
+           }
+           function b()
+           {
+             c1++;
+             ele1.innerHTML=c1;
+           }
+
+
+        </script>
+    </body>
+</html>

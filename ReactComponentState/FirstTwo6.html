@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+              
+        //  var x=<h1>hi</h1>;
+        function Component1()
+        {
+            var ar=[`praveen`,`srikanth`,`edupoly`];
+            return <div>{
+            ar.map((e)=>{
+                 return <h1>{e[0]+e[1]}</h1>
+            })
+            }</div>
+            
+           
+        }
+        ReactDOM.render(<Component1></Component1>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>

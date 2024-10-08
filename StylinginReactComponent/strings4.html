@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+    
+         function Component1(props)
+         {
+            
+           return <div style={{display:'flex'}}>{props.ar.map((e)=> {return <div style={{border:'1px solid',display:'',margin:"10px",padding:"10px"}}>{e}</div>} )}</div>
+         }
+         ReactDOM.render(<Component1 ar={['praveen','ravi','dasu','kiran']}></Component1>,document.getElementById("root"));
+        </script>
+    </body>
+</html>
+<!--
+.in  block level elements take common margin to horizontal.
+.in inline line elements its not taking common margin to vertical.
+
+-->
+

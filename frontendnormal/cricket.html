@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="d"></div>
+    <script type="text/babel">
+        function Cricketers() {
+            var [cricketers, setCricketers] = React.useState([]);
+            var [ncricketer, setNCricketer] = React.useState({
+                fullName: "",
+                image: "",
+                age: "",
+                centuries: "",
+                country: ""
+            })
+            React.useEffect(() => {
+                fetch("http://localhost:3000/cricketers")
+                    .then((res) => {
+                        return res.json()
+                    })
+                    .then((data) => {
+                        setCricketers([...data])
+                    })
+            }, [])
+            // function handleSubmit(){
+            //     event.preventDefault();
+            //     fetch("http://localhost:3000/cricketers",{
+            //         method:"POST"
+            //     })
+            //     .then((res)=>{
+            //         return res.join()
+            //     })
+            //     .then((data)=>{
+            //         setCricketers([...cricketers,data])
+            //     })
+            // }
+            function deletePro(id) {
+                fetch(`http://localhost:3000/cricketers/${id}`, {
+                    method: "DELETE"
+                }).then(function(res){
+                    console.log(res)
+                })
+            }
+
+            return (
+                <div>
+                    <div className="container" >
+                        <form action="http://localhost:3000/cricketers" method="POST">
+                            <label for="name" className="mx-2">FullName:</label>
+                            <input type="text" id="name" name="fullName"/>
+                            <label for="img" className="mx-2">Image:</label>
+                            <input type="text" id="img" name="image"/>
+                            <label for="age" className="mx-2">Age:</label>
+                            <input type="text" id="age" name="age"/>
+                            <label for="centuries" className="mx-2">Centuries:</label>
+                            <input type="text" id="centuries" name="centuries"/>
+                            <label for="ctry" className="mx-2">Country:</label>
+                            <input type="text" id="ctry" name="country"/>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <h1 className="ms-3">Players</h1>
+                    {
+                        !cricketers && (
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                        )
+                    }
+                    <div className="d-flex flex-wrap justify-content-center m-3 g-2">
+                        {
+                            cricketers?.map((p, id) => {
+                                return (<div className="card" style={{ width: "18rem" }}>
+                                    <img src={p.image} className="card-img-top" style={{ width: "100%", height: "200px" }} />
+                                    <div className="card-body">
+                                        <h5 className="card-title">Name: {p.fullName}</h5>
+                                        <p className="card-text">Age: {p.age}</p>
+                                        <p className="card-text">Centuries: {p.centuries}</p>
+                                        <p className="card-text">Country: {p.country}</p>
+                                        <button className="btn btn-primary" onClick={() => { deletePro(p.id) }}>Delete</button>
+                                    </div>
+                                </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            )
+        }
+        ReactDOM.render(<Cricketers />, document.getElementById("d"))
+    </script>
+</body>
+
+</html>
+   

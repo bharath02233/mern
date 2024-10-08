@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+     <div id="d1" style="border:solid;border-radius: 10px;">
+
+     </div>
+        
+        <script>
+          var x=window.location.hash.slice(1,2);
+          fetch(`http://localhost:4301/product/getProductById/${x}`).then((res)=>{
+            res.json().then((ob)=>{
+
+                var nh1=document.createElement("h1");
+                nh1.innerHTML=ob[0].id;
+                 document.getElementById('d1').appendChild(nh1);
+
+                var nh1=document.createElement("h1");
+                    nh1.innerHTML= ob[0].title;
+                    document.getElementById('d1').appendChild(nh1);
+
+                    var nh1=document.createElement("h1");
+                    nh1.innerHTML= ob[0].price;
+                    document.getElementById('d1').appendChild(nh1);
+                    
+                    var nh1=document.createElement("h1");
+                    nh1.innerHTML= ob[0].description;
+                    document.getElementById('d1').appendChild(nh1);
+                  
+
+                    var nh1=document.createElement("h1");
+                    nh1.innerHTML= ob[0].category;
+                    document.getElementById('d1').appendChild(nh1);
+
+                    var nimg=document.createElement("img");
+                    nimg.src=ob[0].image;
+                    nimg.style.width="290px";
+                    nimg.style.height="200px";
+                    document.getElementById('d1').appendChild(nimg);
+                    
+                    var na=document.createElement("a");
+                    na.href="editProduct.html"+`#${ob[0].id}`;
+                    na.innerHTML="edit";
+                    na.style.fontSize="40px";
+                    document.getElementById('d1').appendChild(na);
+                    
+
+            })
+          })
+          
+        </script>
+    </body>
+</html>

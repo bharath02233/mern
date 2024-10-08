@@ -1,0 +1,12 @@
+npm i json-server@0.17.4
+node server.js
+
+put:
+when we send a put request then it will not update particular property it will update hole value.
+
+patch:
+
+it will update particular properties also.
+
+
+

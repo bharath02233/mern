@@ -1,0 +1,52 @@
+{
+  "cricketers": [
+    {
+      "id": 8,
+      "fullName": "Quinton de Kock",
+      "image": "https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2023/10/24/3810944-77470808-2560-1440.jpg",
+      "age": 31,
+      "gender": "Male",
+      "centuries": 28,
+      "country": "South Africa",
+      "strikeRate": 95.53
+    },
+    {
+      "id": 9,
+      "fullName": "Ben Stokes",
+      "image": "https://e0.365dm.com/23/09/2048x1152/skysports-cricket-ben-stokes_6283849.jpg?20230914085802",
+      "age": 33,
+      "gender": "Male",
+      "centuries": 20,
+      "country": "England",
+      "strikeRate": 92.85
+    },
+    {
+      "id": 10,
+      "fullName": "Jos Buttler",
+      "image": "https://www.geosuper.tv/assets/uploads/updates/2022-06-30/16807_3362496_updates.jpg",
+      "age": 34,
+      "gender": "Male",
+      "centuries": 14,
+      "country": "England",
+      "strikeRate": 88.24
+    },
+    {
+      "id": 11,
+      "fullName": "Shubman Gill",
+      "image": "https://images.news18.com/ibnlive/uploads/2024/07/indian-captain-shubman-gill-2024-07-f45f363b20483e2ee8dac9879be44a08.jpg?impolicy=website&width=640&height=480",
+      "age": 25,
+      "gender": "Male",
+      "centuries": 12,
+      "country": "India",
+      "strikeRate": 95.2
+    },
+    {
+      "fullName": "bharath",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "age": "23",
+      "centuries": "50",
+      "country": "India",
+      "id": 12
+    }
+  ]
+}

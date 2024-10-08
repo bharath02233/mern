@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style="border:solid;height:200px;width:200px;font-size:50px;" id="d1">i am nothing</div>
+        <br>
+        <br>
+        <button onclick="a()">True/False</button>
+        
+        <script>
+           var ele=document.getElementById("d1");
+           function a()
+           {
+               if(ele.innerHTML=="i am nothing")
+               {
+                ele.innerHTML="true";
+               }
+               else if(ele.innerHTML=="true")
+               {
+                ele.innerHTML="false";
+               }
+               else{
+                ele.innerHTML="true";
+               }
+           }
+
+        </script>
+    </body>
+</html>

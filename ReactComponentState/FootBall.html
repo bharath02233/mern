@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+              
+        //  var x=<h1>hi</h1>;
+        
+        function Component1(props)
+        {
+            var [count,setCount]=React.useState([0,0,0,0,0]);
+            var [total,setTotal]=React.useState(0);
+    
+              function add1(){
+                var t=count.reduce((a,b)=>{
+                    return a+b;
+                  });
+                  
+                  setTotal(t);
+                  
+              }
+               
+
+             var slide1=props.ar;
+
+                function add(x)
+                {
+                
+                   var temp=count;
+                   temp[x]=temp[x]+1;
+                   setCount([...temp]);
+                   add1();
+                   
+                }
+
+            return <div style={{"border":"solid","padding":"20px","margin":"20px","background-color":"white","width":"200px","display":"inline-block","margin":"149px"}}>
+                <div>{total}</div>
+                <h1>{props.Tname} </h1>{ 
+
+                slide1.map((e,i)=>{
+                        return <div>{e}<button onClick={()=>{add(i)}}>goal</button>:{count[i]}</div>
+                    })
+                    
+
+                }</div>
+        
+             
+         
+           
+        }
+        ReactDOM.render(<div style={{"background-color":"skyblue","padding":"50px"}}><h1 style={{"text-align":"center"}}>Football ScoreCards</h1>  
+               <Component1 ar={["bharath","srikanth","srinu","nikhil","chandra"]} Tname="India"></Component1>
+            <Component1 ar={["a","b","c","d","e"]} Tname="Argentina"></Component1> </div>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

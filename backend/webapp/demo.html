@@ -1,0 +1,58 @@
+<!DOCTYPE html>           
+<html>
+    <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+      
+     <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+      <!-- <img src="ee.jpeg">
+      <a href="notes.html" >hello</a> -->
+      <!-- <form method="post" action="http://localhost:4300/add">
+        <input name="a">
+        <input name="b">
+        <button>click me</button>
+      </form> -->
+      
+      <div id="d1">
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+     <script type="text/babel">
+
+     function Display()
+        {
+
+         console.log('hi');
+          var x="hello"; 
+           function add()
+           {
+            var y=document.getElementById('i1').value;
+             document.getElementById('h1').innerHTML=y;
+            //  document.getElementById('h2').innerHTML=y;
+            //  document.getElementById('h3').innerHTML=y;
+            //  x=y;
+           }
+           return <div>
+            <input id="i1" />
+            <button onClick={add}>clickme</button>
+             <h1 id="h1"></h1>
+             <h1 id="h2"></h1>
+              <h1 id="h3"></h1>
+            </div>
+        }
+      ReactDOM.render(<Display></Display>,document.getElementById('d1'));
+    
+    
+    </script>
+       
+    </body>
+</html>

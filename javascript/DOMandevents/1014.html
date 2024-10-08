@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            1014.html
+        </title>
+    </head>
+    <body>
+        <h1 style="color:red;text-align: center;" >Show Images Using URL</h1>
+       <b style="color: red;margin-left:40%;">Enter image URL:</b>
+     <input id="i1">
+     <br>
+     <br>
+     <button style="background-color:yellow;margin-left:50%;" onclick="a()">AddImage</button>
+     <div style="height: 100px;text-align: center;" id="d1"></div>
+     <script>
+        function a()
+        {
+              var ele=document.getElementById("i1");
+              var val=ele.value; 
+              var ele1=document.createElement("img");
+              ele1.src=val;
+             document.getElementById("d1").appendChild(ele1);
+
+        }
+       </script>
+    </body>
+</html>

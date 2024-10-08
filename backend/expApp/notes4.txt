@@ -1,0 +1,16 @@
+cookies:
+
+cokkies are key values pairs.which is created by server.and it will send along with response
+
+
+ftp is connection oriented. 
+http is a connection less.
+
+
+
+
+persistent(connection oriented):
+
+
+
+npm i express-session

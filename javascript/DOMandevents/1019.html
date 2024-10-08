@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>1019.html</title>
+</head>
+<style>
+    #h1 {
+        color: red;
+        text-align: center;
+    }
+
+    #l1 {
+        margin-left: 40%;
+        color: red;
+        font-size: 30px;
+    }
+
+    #l2 {
+        margin-left: 40%;
+        color: red;
+        font-size: 30px;
+    }
+
+    #l3 {
+        margin-left: 40%;
+        color: red;
+        font-size: 30px;
+    }
+
+    #l4 {
+        margin-left: 40%;
+        color: red;
+        font-size: 30px;
+    }
+
+    #b1 {
+        margin-left: 50%;
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <h1 id="h1">Add Contact Cards</h1>
+    <label for="i1" id="l1">Name:</label>
+    <input type="text" id="i1">
+    <br>
+    <br>
+    <label for="i2" id="l2">Number:</label>
+    <input type="number" id="i2">
+    <br>
+    <br>
+    <label for="i3" id="l3">Email:</label>
+    <input type="email" id="i3">
+    <br>
+    <br>
+    <label for="i4" id="l4">Enter image url:</label>
+    <input type="url" id="i4">
+    <br>
+    <br>
+    <button id="b1" onclick="a()">Add Contact</button>
+    <br>
+
+    
+   
+    <script>
+        function a() {
+
+            var ele = document.createElement("div");
+
+            ele.style.height = "100px";
+            // ele.style.width="100px";
+            ele.style.border = "2px solid red";
+            var ele1 = document.getElementById("i1").value;
+            var ele2 = document.getElementById("i2").value;
+            var ele3 = document.getElementById("i3").value;
+            var ele4 = document.getElementById("i4");
+            var val = ele1 + ele2 + ele3;
+            // var ele5=document.createElement("h1");
+            ele1.style.display = "block";
+            ele.appendChild(ele1);
+            document.body.appendChild(ele);
+
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

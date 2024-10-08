@@ -1,0 +1,11 @@
+html 
+    head
+    body
+        h1 hello this is my first program in pug 
+        a(href="/addProduct") addproduct
+        ul 
+          each product in products 
+            li=product.title
+            a(href="/details/"+product.id) viewmore
+
+

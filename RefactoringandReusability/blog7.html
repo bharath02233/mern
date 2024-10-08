@@ -1,0 +1,61 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+        
+
+
+       
+       
+        function Component1()
+        {
+            var [misqaud, setmisquad] = React.useState([{title:'morning vibes',content:`Surprise been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchan`,c:0,c1:0},{title:'react basic',content:`readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like re`,c:0,c1:0},{title:`Where can I get some?`,content:`There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need t essentially unchan`,c:0,c1:0}]);
+           function add(i)
+           {
+              var temp=[...misqaud];
+              temp[i].c=temp[i].c+1;
+              setmisquad([...temp]);
+           }
+           function add1(i)
+           {
+              var temp=[...misqaud];
+              temp[i].c1=temp[i].c1+1;
+              setmisquad([...temp]);
+           }
+           function add2()
+           {
+             var s=document.getElementById('i1').value;
+             var s1=document.getElementById('t1').value;
+            
+
+              var temp=[...misqaud];
+              temp.push({title:s,content:s1,c:0,c1:0});
+              console.log(temp);
+              setmisquad([...temp]);
+           }
+   
+           return <div>
+            <div>My Social App</div>
+            <div>Title:</div>
+            <input type="text" placeholder="Enter Title" id="i1"/>
+            <div>Content:</div>
+            <textarea id="t1"/><br/>
+            <button style={{'background-color':'black',color:'white','margin-top':"10px"}} onClick={add2}>Add Post</button>
+            {misqaud.map((e,i)=>{return <div style={{border:'1px solid grey','margin-top':'10px'}}>{e.title}<p>{e.content}</p><button onClick={()=>{add(i)}} style={{'background-color':'green'}}>Like:{e.c}</button><button onClick={()=>{add1(i)}} style={{'background-color':'skyblue','margin-left':'526px'}} >Dislike:{e.c1}</button></div>})}
+            </div>
+                   
+            
+        }
+        ReactDOM.render(<Component1></Component1>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

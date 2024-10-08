@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        <div id="d1"></div>
+         <button onclick="abc(event)" id="b1">1</button>
+         <button onclick="abc(event)" id="b2">2</button>
+         <button onclick="abc(event)" id="b3">3</button>
+          
+
+        <script >
+        var ar=["hello","hi","hfh","fjfk","hhh","ji"];
+        var br=[];
+        function abc(ev)
+        {
+
+           var x=document.getElementById("d1");
+        
+           var x1=+ev.target.innerHTML;
+           for(var i=x1;i<x1+2;i++)
+           {
+            var y=document.createElement("div");
+             y.innerHTML=ar[i]; 
+             x.appendChild(y);
+           }
+           
+          
+
+        }
+
+        //  var x=<h1>hi</h1>;
+        // function Component1()
+        // {
+        //     var ar=[{firstname:"Praveen Gubbala",Age:40},{firstname:"Bharath Reddy",Age:20},{firstname:"Srinu",Age:50}];
+        //     var [val,setVal]=useState(0);
+        //     function add()
+        //     {
+        //       console.log('hi')
+        //     }
+           
+        //     return <div>
+              
+        //         {
+        //           <button onclick="abc"></button>
+        //         }
+        
+             
+        //  </div>
+           
+        // }
+        // ReactDOM.render(<Component1></Component1>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

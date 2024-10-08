@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>110.html</title>
+    </head>
+    <body>
+        <h1 style="color:red;text-align: center;">Show bulb on/off image using toggle button</h1>
+        <div id="d1" style="border:solid white;width:100px;height: 100px;margin: auto;background-color:white;"><img id="i1" width="100px" height="100px"></div><br>
+        <button style="background-color:rgba(255, 255, 0, 0.494);margin-left:48%;" onclick="a(event)">ON</button>
+   
+        <script>
+            function a(ev)
+            {
+                var x=document.getElementById("i1");
+                if(ev.target.innerHTML=="ON")
+                {
+               
+                x.src="img1.png";
+                ev.target.innerHTML="OFF";
+                }
+                else{
+                  x.src="img2.jpeg";
+                  ev.target.innerHTML="ON";
+                }
+                
+           }
+                
+              
+        </script>
+
+    </body>
+</html>

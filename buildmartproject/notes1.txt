@@ -1,0 +1,1 @@
+when we have only navigate("dashboard") then it will add this path to previous path.but when you add navigate("/dashboard") it will take root path.

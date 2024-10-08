@@ -1,0 +1,14 @@
+moongoose is not only a connector driver it also create schema that means mapper(odm) object document mapper.
+
+
+res.render();// method takes pug program and  generates html file for broswer.//important
+
+
+
+
+web
+
+website
+
+webapp
+webapi

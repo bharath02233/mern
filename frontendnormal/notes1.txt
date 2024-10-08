@@ -1,0 +1,16 @@
+
+moongoose
+
+in updateOne and replaceOne we cannot update the objectid in both
+
+`it checks the schema `.it will not update where there is a new key.
+
+updateOne()
+
+if the field is there then it will update to the new value.
+
+
+replaceOne()
+
+it will replace the document with new document.
+

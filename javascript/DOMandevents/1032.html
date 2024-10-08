@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1032.html</title>
+</head>
+<body>
+    <input type="date" onchange="a(event)" id="i1" >
+    <input type="radio" onchange="a(event)" >
+    <script>
+        var ele=document.getElementById("i1").value;
+        console.log(ele.value);
+        function a(ev)
+        {
+         console.log(ev.target.value);
+         
+        }
+    </script>
+</body>
+</html>

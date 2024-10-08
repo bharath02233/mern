@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    <div style="text-align: center;">
+     <form name="editProductForm" method="" action="" onsubmit="add(event)">
+        <input id="i1" type="number" name="id"/><br/>
+        <input id="i2" type="text" name="title"/><br/>
+        <input  id="i3" type="number" name="price"/><br/>
+        <input id="i4" type="text" name="description"/><br/>
+        <input id="i5" type="text" name="category"/><br/>
+        <input id="i6"type="text" name="image"/><br/>
+         <button>update</button>
+     </form>
+        </div>
+        <script>
+            function add(ev)
+            {
+              ev.preventDefault();
+              console.log(document.editProductForm.id.value);
+                 fetch('http://localhost:4301/product/updateProduct',{body:JSON.stringify({
+                     id:document.editProductForm.id.value,
+                     title:document.editProductForm.title.value,
+                     price:document.editProductForm.price.value,
+                     description:document.editProductForm.description.value,
+                     category:document.editProductForm.category.value,
+                     image:document.editProductForm.image.value
+                 }
+                ),
+                method:'PUT',
+                headers:{'Content-Type':'application/json'}
+                }
+              ).then(()=>{})
+              
+              
+            }
+          var x=window.location.hash.slice(1,2);
+          fetch(`http://localhost:4301/product/getProductById/${x}`).then((res)=>{
+            res.json().then((ob)=>{
+                console.log(ob);
+              document.getElementById('i1').value=ob[0].id;
+              document.getElementById('i2').value=ob[0].title;
+              document.getElementById('i3').value=ob[0].price;
+              document.getElementById('i4').value=ob[0].description;
+              document.getElementById('i5').value=ob[0].category;
+              document.getElementById('i6').value=ob[0].image;
+
+            })
+          })
+          
+        </script>
+    </body>
+</html>

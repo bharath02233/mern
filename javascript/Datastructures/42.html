@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            42.html
+        </title>
+    </head>
+    <body>
+      <script>
+        var ar=[1,2,3,7,23,44,9];
+        var br=[4,5,6];
+        var cr=ar.concat(br);
+        var dr=cr.sort(function(a,b){
+             if(a<b)
+             {
+                return -1;
+             }
+             else
+             {
+                return 1;
+             }
+        });
+        dr[0]=-3;
+        console.log(cr);
+        console.log(dr);
+      </script>
+    </body>
+</html>

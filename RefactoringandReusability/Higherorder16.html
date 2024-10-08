@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+        
+
+
+        //  var x=<h1>hi</h1>;
+        function FirstComponent(props)
+        {
+            var [count,setCount]=React.useState(1);
+            function inc()
+            {
+                setCount(count+1);
+            }
+            function dec()
+            {
+                setCount(count-1);
+            }
+           return <div style={{border:'1px solid',margin:'5px'}}>Count:{count}<div><button onClick={inc}>Increment</button><button onClick={dec}>Decerement</button></div></div>
+        }
+        function SecondComponent(props)
+        {
+            var [count,setCount]=React.useState(1);
+            function inc()
+            {
+                setCount(count+1);
+            }
+            function dec()
+            {
+                setCount(count-1);
+            }
+           return <div style={{border:'1px solid',margin:'5px'}}>H1count:{count}<div><button onClick={inc}>Increment</button><button onClick={dec}>Decerement</button></div></div>
+        }
+       
+        function Component1()
+        {
+     
+            var [val,setVal]=React.useState("");
+            var [val1,setVal1]=React.useState();
+            function change(x){
+                   setVal(x);
+            }
+            
+            return <div style={{border:'1px solid',padding:'5px'}}>
+            
+               App....
+               
+               <FirstComponent ></FirstComponent>
+               <SecondComponent></SecondComponent>
+            </div>
+            
+           
+        }
+        ReactDOM.render(<div><Component1></Component1></div>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

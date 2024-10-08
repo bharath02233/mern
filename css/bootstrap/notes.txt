@@ -1,0 +1,52 @@
+rule 
+selectors
+decleration
+
+
+
+body has 4 px margin by default
+
+default font is time new roman
+
+
+
+
+
+bootstrap:
+
+max -5
+min -1
+
+
+text-danger text-center  text-wrap text-lowercase
+
+line height  lh-lg lh-sm
+
+text decoration  text-decoration-none text-decoration-underline 
+
+opacity  text-danger text-opacity-50
+
+lists list-unstyled  
+
+
+total width occupies as 12 units 
+
+
+utilities:
+
+
+bootstrap start top end bottom   css top right bottom left
+
+x-axis y-axis
+
+
+visibility:hidden   it will occupy the width but the content is not displayed
+
+display:none it will not occupy the width as well as content is not displayed 
+
+margin auto doubt
+
+
+position:
+ when we apply positions to the elements then it will remove from natural flow of the document.
+

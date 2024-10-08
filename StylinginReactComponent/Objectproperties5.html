@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+    
+         function Component1(props)
+         {
+          
+           return <div style={{border:'1px solid'}}>{props.ar.map((e)=> {return <div style={{padding:'10px'}}><h1>Name:{e.name}</h1><p>Gender:{e.gender}</p><i>Age:{e.age}</i></div>} )}</div>
+         }
+         ReactDOM.render(<Component1 ar={[{name:'praveen',gender:'male',age:40}]}></Component1>,document.getElementById("root"));
+        </script>
+    </body>
+</html>
+<!--object functions-->
+<!--mis answer-->
+
+
+

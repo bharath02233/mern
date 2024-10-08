@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>
+        1015.html
+     </title>
+     <style>
+        h1{
+            color:red;
+            text-align: center;
+        }
+        input
+        {
+            margin-left:40%;
+        }
+        button
+        {
+            background-color:orange;
+            border-color: orange;
+        }
+        li{
+            color: red;
+            font-size: 50px;
+            margin-left:40%;
+        }
+        /* div
+        {
+            border: solid;
+          height:100px;  
+            
+        }  */
+     </style>
+    </head>
+    <body>
+      <h1 >Add Students</h1>
+      <input type="text" placeholder="enter name" id="i1">
+      <button onclick="a()">Add Student</button>
+      <ul id="u1"><!--doubt if we increase content in border automatically height also increase aa.-->
+
+      </ul><!--here ul place only content in another conatiner but not hole element-->
+      <!-- <div>
+        <li>hi</li>
+      </div>      here div place hole element in another container -->
+      <script>
+      function a()
+      {
+        var val=document.getElementById("i1").value;
+        var ele=document.createElement("li");
+        ele.innerHTML=val;
+        document.getElementById("u1").appendChild(ele);
+      }
+
+      </script>
+   
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>1.html</title>
+    </head>
+    <body>
+    <h1 id="a">Hello World</h1>
+
+    <script>
+    var x=document.getElementById("a").innerHTML;
+    console.log(x);
+    console.log(typeof x);
+    console.log(x.toUpperCase());//it will return new upper case converted string.it will not modify value in orginal string.it will not accept any arguments.
+    setTimeout(function(){document.getElementById("a").innerHTML="Welcome to Edupoly"},4000);
+    
+    </script>
+    </body>
+</html>

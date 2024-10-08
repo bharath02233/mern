@@ -1,0 +1,81 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body id="b1">
+        
+
+        
+        <script type="text/babel">
+        
+
+
+       
+       
+        function Component1()
+        {
+            var [misqaud, setmisquad] = React.useState([
+    'Rohit Sharma',
+    'Kieron Pollard',
+    'Suryakumar Yadav',
+    'Jasprit Bumrah',
+    'Ishan Kishan',
+    'Ramandeep Singh',
+    'Rahul Buddhi',
+    'Hrithik Shokeen',
+    'Arjun Tendulkar',
+    'Aryan Juyal',
+    'Fabian Allen',
+    'Dewald Brevis',
+    'Basil Thampi',
+    'M Ashwin',
+    'Jaydev Unadkat',
+    'Mayank Markande',
+    'Tilak Varma',
+    'Sanjay Yadav',
+    'Riley Meredith',
+    'Mohd Arshad Khan',
+    'Anmolpreet Singh',
+  ]);
+  var [misqaud1, setmisquad1]=React.useState([]);
+   function delete1(i)
+   {
+       
+       var temp=[...misqaud];
+
+       setmisquad1([...misqaud1,temp[i]]);
+       
+        temp.splice(i,1);
+       
+        setmisquad([...temp]);
+
+   }
+   function delete2(i)
+   {
+       
+       var temp=[...misqaud1];
+
+       setmisquad([...misqaud,temp[i]]);
+       
+        temp.splice(i,1);
+       
+        setmisquad1([...temp]);
+
+   }
+           return <div style={{display:"flex"}}>
+                  <div >hello</div>
+                  <div>hello</div>
+                   <div style={{border:"1px solid"}}><div>Mumbai indian Squad</div>{misqaud.length==0?"(no player in missquad)":"(click here to unselect)"}{misqaud.map((e,i)=>{return <li style={{color:'green'}} onClick={()=>{delete1(i)}}>{e}</li>})}</div>
+                   <div style={{'margin-left':'40px',border:"1px solid blue"}}><div>kings 11 punjab-{misqaud1.length}</div>{misqaud1.length==0?"(no player in missquad)":"(click here to unselect)"}{misqaud1.map((e,i)=>{return <li style={{color:'skyblue'}}onClick={()=>{delete2(i)}}>{e}</li>})}</div>
+            </div>
+                   
+            
+        }
+        ReactDOM.render(<Component1></Component1>,document.getElementById("b1"));
+        </script>
+    </body>
+</html>
+

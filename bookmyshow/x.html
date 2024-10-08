@@ -1,0 +1,37 @@
+<html></html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="demo.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            
+            
+            var Abc=function(){
+                var [dt,setdt]=React.useState([{'A':[{status:false},{status:false}]},{'B':[{status:false},{status:false}]}]);
+                 function changeStatus(j,i,row)
+                 {
+                     var temp=[...dt];
+                    
+                     temp[j][row][i].status=!temp[j][row][i].status;
+                     setdt(temp);
+                 }
+            
+                return (
+                    <div>{
+                        bookmay?.map((ob,j)=>{
+                           return <div>{ob.rows}{ob.seats.map((ob1,i)=>{return <div onClick={()=>{changeStatus(j,i,ob.rows)}} style={{'display':'inline-block',border:'solid',margin:'5px','backgroundColor':dt[j][ob.rows][i].status==true?'lightgreen':''}}>{ob1.number}</div>})}</div>
+                        })
+                        }
+        
+                    </div>
+                )
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>

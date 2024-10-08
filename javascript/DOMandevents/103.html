@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body style="background-color:rgba(255, 255, 0, 0.194);">
+    <h1 style="color: red;"><center>Change button background color on click</center></h1> 
+    <center><button onclick="a(event)" id="1">white</button></center>
+     <script>
+        function a(e)
+        {
+          var x=e.target.innerHTML;
+          console.log(x);
+          if(x=="white")
+          {
+            document.getElementById("1").innerHTML="green";
+            document.getElementById("1").style.backgroundColor="green";
+          }
+          else{
+            document.getElementById("1").innerHTML="white";
+            document.getElementById("1").style.backgroundColor="white";
+          }
+        }
+    
+     </script>
+    </body>
+</html>

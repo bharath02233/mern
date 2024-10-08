@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "title": "c",
+      "author": "denis ritchie",
+      "id": 3
+    },
+    {
+      "title": "hello",
+      "author": "xyz",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

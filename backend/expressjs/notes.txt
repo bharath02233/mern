@@ -1,0 +1,22 @@
+5-9-24
+webserver
+localhost local computer
+express js,nodejs  we can create  web application,web api.
+
+what is web application?
+it contains a program or set or programs in the web server.
+  
+url
+
+
+
+
+
+when we get a request form broswer based on the path and http method respective
+route program will execute.
+
+routing :
+path
+HTTP method
+
+
